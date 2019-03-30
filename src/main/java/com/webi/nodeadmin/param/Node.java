@@ -9,8 +9,8 @@ package com.webi.nodeadmin.param;
  * @author Administrator
  */
 public class Node {
-    private int data;
-    private Node next;
+     int data;
+     Node next;
 
     public int getData() {
         return data;

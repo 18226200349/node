@@ -1,6 +1,7 @@
 package com.webi.nodeadmin;
 
 import com.webi.nodeadmin.param.Node;
+import com.webi.util.MergeNodeUtil;
 import com.webi.util.ReverseNodeUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,23 +25,37 @@ public class NodeadminApplicationTests {
 			head.setNext(node1);
 			node1.setNext(node2);
 			node2.setNext(node3);
-			Node h=head;
-			while(h!=null){
-				System.out.println(h.getData()+"###");
-				h=h.getNext();
+		Node head1=new Node(0);
+		Node node4 = new Node(2);
+		Node node5 = new Node(3);
+		Node node6 = new Node(6);
+		head1.setNext(node4);
+		node4.setNext(node5);
+		node5.setNext(node6);
+			Node head3=MergeNodeUtil.merge(head,head1);
+			while(head3!=null){
+				System.out.println(head3.getData()+"####");
+				head3=head3.getNext();
 			}
+
+
+//			Node h=head;
+//			while(h!=null){
+//				System.out.println(h.getData()+"###");
+//				h=h.getNext();
+//			}
 			//递归反转
-			Node headTmp=ReverseNodeUtil.reverse(head);
-		while (null != headTmp) {
-			System.out.print(headTmp.getData() + " ");
-			headTmp = headTmp.getNext();
-		}
+//			Node headTmp=ReverseNodeUtil.reverse(head);
+//		while (null != headTmp) {
+//			System.out.print(headTmp.getData() + " ");
+//			headTmp = headTmp.getNext();
+//		}
 		//循环反转
-		Node headTmp2=ReverseNodeUtil.reverse1(head);
-		while(null!=headTmp2){
-			System.out.print(headTmp2.getData()+" $ ");
-			headTmp2=headTmp2.getNext();
-		}
+//		Node headTmp2=ReverseNodeUtil.reverse1(head);
+//		while(null!=headTmp2){
+//			System.out.print(headTmp2.getData()+" $ ");
+//			headTmp2=headTmp2.getNext();
+//		}
 	}
 
 

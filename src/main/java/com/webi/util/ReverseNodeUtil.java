@@ -43,7 +43,17 @@ public class ReverseNodeUtil {
         head.setNext(null);
         return  pre;
     }
-    //递归反转链表
+    /**
+     * Title: 递归反转链表<br>
+     * Description: 递归反转链表<br>
+     * CreateDate: 2019/3/30 21:20<br>
+     *
+     * @category 递归反转链表
+     * @author Administrator
+     * @param head
+     * @return com.webi.nodeadmin.param.Node
+     * @exception Exception
+     */
     public static Node reverse(Node head) {
         if(head==null||head.getNext()==null){
             return  head;
